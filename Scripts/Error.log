@@ -1,0 +1,183 @@
+
+ERROR - mbox() missing 1 required positional argument: 'text'
+Traceback (most recent call last):
+  File "C:\Users\Sher Wen\Desktop\Shovel v3.0\Scripts\Plaxis_Load_All.py", line 9, in <module>
+    load.extract_to_table()
+  File "C:\Users\Sher Wen\Desktop\Shovel v3.0\Scripts\Shovel_Classes.py", line 292, in extract_to_table
+    toolkit.mbox("No model to load")
+TypeError: mbox() missing 1 required positional argument: 'text'
+
+ERROR - 'Extractor' object has no attribute 'bp_output'
+Traceback (most recent call last):
+  File "C:\Users\Sher Wen\Desktop\Shovel v3.0\Shovel v3.0\Scripts\Plaxis_Extract_All.py", line 8, in <module>
+    extract = Shovel_Classes.Extractor(shovel_wb=wb_name, extract_all=True)
+  File "C:\Users\Sher Wen\Desktop\Shovel v3.0\Shovel v3.0\Scripts\Shovel_Classes.py", line 360, in __init__
+    process, self.s_i, self.g_i = self.bp_output.app_plaxis_launcher()
+AttributeError: 'Extractor' object has no attribute 'bp_output'
+
+ERROR - 'str' object is not callable
+Traceback (most recent call last):
+  File "C:\Users\Sher Wen\Desktop\Shovel v3.0\Shovel v3.0\Scripts\Plaxis_Extract_All.py", line 9, in <module>
+    extract.process_flow()
+  File "C:\Users\Sher Wen\Desktop\Shovel v3.0\Shovel v3.0\Scripts\Shovel_Classes.py", line 508, in process_flow
+    self.xl_open_extraction_wb()
+  File "C:\Users\Sher Wen\Desktop\Shovel v3.0\Shovel v3.0\Scripts\Shovel_Classes.py", line 451, in xl_open_extraction_wb
+    self.output_data_table = ExcelTable.open_wb(wb_path, "Extractor", "tbl_Data")
+  File "C:\Users\Sher Wen\Desktop\Shovel v3.0\Shovel v3.0\Scripts\Shovel_Classes.py", line 39, in open_wb
+    wb_name = str(wb.Name()).split(".")[0]
+TypeError: 'str' object is not callable
+
+ERROR - 'str' object is not callable
+Traceback (most recent call last):
+  File "C:\Users\Sher Wen\Desktop\Shovel v3.0\Shovel v3.0\Scripts\Plaxis_Extract_All.py", line 9, in <module>
+    extract.process_flow()
+  File "C:\Users\Sher Wen\Desktop\Shovel v3.0\Shovel v3.0\Scripts\Shovel_Classes.py", line 508, in process_flow
+    self.xl_open_extraction_wb()
+  File "C:\Users\Sher Wen\Desktop\Shovel v3.0\Shovel v3.0\Scripts\Shovel_Classes.py", line 451, in xl_open_extraction_wb
+    self.output_data_table = ExcelTable.open_wb(wb_path, "Extractor", "tbl_Data")
+  File "C:\Users\Sher Wen\Desktop\Shovel v3.0\Shovel v3.0\Scripts\Shovel_Classes.py", line 39, in open_wb
+    wb_name = str(wb.Name().split(".")[0])
+TypeError: 'str' object is not callable
+
+ERROR - (-2146777998, 'OLE error 0x800ac472', None, None)
+Traceback (most recent call last):
+  File "C:\Users\Sher Wen\Desktop\Shovel v3.0 (2)\Shovel v3.0\Scripts\Plaxis_Extract_All.py", line 9, in <module>
+    extract.process_flow()
+  File "C:\Users\Sher Wen\Desktop\Shovel v3.0 (2)\Shovel v3.0\Scripts\Shovel_Classes.py", line 429, in process_flow
+    self.xl_open_extraction_wb()
+  File "C:\Users\Sher Wen\Desktop\Shovel v3.0 (2)\Shovel v3.0\Scripts\Shovel_Classes.py", line 366, in xl_open_extraction_wb
+    self.output_data_table = ExcelTable.open_wb(wb_path, "Extractor", "tbl_Data")
+  File "C:\Users\Sher Wen\Desktop\Shovel v3.0 (2)\Shovel v3.0\Scripts\Shovel_Classes.py", line 38, in open_wb
+    wb = xl.Workbooks.Open(wb_path)
+  File "C:\Users\SHERWE~1\AppData\Local\Temp\gen_py\3.7\00020813-0000-0000-C000-000000000046x0x1x9\Workbooks.py", line 78, in Open
+    , Converter, AddToMru, Local, CorruptLoad)
+pywintypes.com_error: (-2146777998, 'OLE error 0x800ac472', None, None)
+
+ERROR - (-2147352567, 'Exception occurred.', (0, 'Microsoft Excel', 'This extension can not be used with the selected file type. Change the file extension in the File name text box or select a different file type by changing the Save as type.', 'xlmain11.chm', 0, -2146827284), None)
+Traceback (most recent call last):
+  File "C:\Users\Sher Wen\Desktop\Shovel v3.0 (2)\Shovel v3.0\Scripts\Plaxis_Extract_All.py", line 9, in <module>
+    extract.process_flow()
+  File "C:\Users\Sher Wen\Desktop\Shovel v3.0 (2)\Shovel v3.0\Scripts\Shovel_Classes.py", line 438, in process_flow
+    self.xl_save_wb()
+  File "C:\Users\Sher Wen\Desktop\Shovel v3.0 (2)\Shovel v3.0\Scripts\Shovel_Classes.py", line 418, in xl_save_wb
+    self.output_map_table.save_as(f'{self.output_path}\\{new_file_name}')
+  File "C:\Users\Sher Wen\Desktop\Shovel v3.0 (2)\Shovel v3.0\Scripts\Shovel_Classes.py", line 172, in save_as
+    self.wb.SaveAs(full_path)
+  File "C:\Users\SHERWE~1\AppData\Local\Temp\gen_py\3.7\00020813-0000-0000-C000-000000000046x0x1x9\_Workbook.py", line 288, in SaveAs
+    , Local, WorkIdentity)
+pywintypes.com_error: (-2147352567, 'Exception occurred.', (0, 'Microsoft Excel', 'This extension can not be used with the selected file type. Change the file extension in the File name text box or select a different file type by changing the Save as type.', 'xlmain11.chm', 0, -2146827284), None)
+
+ERROR - (-2147417848, 'The object invoked has disconnected from its clients.', None, None)
+Traceback (most recent call last):
+  File "C:\Users\Sher Wen\Desktop\Shovel v3.0 (2)\Shovel v3.0\Scripts\Plaxis_Extract_All.py", line 9, in <module>
+    extract.process_flow()
+  File "C:\Users\Sher Wen\Desktop\Shovel v3.0 (2)\Shovel v3.0\Scripts\Shovel_Classes.py", line 438, in process_flow
+    self.xl_save_wb()
+  File "C:\Users\Sher Wen\Desktop\Shovel v3.0 (2)\Shovel v3.0\Scripts\Shovel_Classes.py", line 419, in xl_save_wb
+    self.output_map_table.wb.Activate()
+  File "C:\Users\SHERWE~1\AppData\Local\Temp\gen_py\3.7\00020813-0000-0000-C000-000000000046x0x1x9\_Workbook.py", line 37, in Activate
+    return self._oleobj_.InvokeTypes(304, LCID, 1, (24, 0), (),)
+pywintypes.com_error: (-2147417848, 'The object invoked has disconnected from its clients.', None, None)
+
+ERROR - (-2147352567, 'Exception occurred.', (0, None, None, None, 0, -2147352565), None)
+Traceback (most recent call last):
+  File "C:\Users\Sher Wen\Desktop\Shovel v3.0 (2)\Shovel v3.0\Scripts\Plaxis_Extract_All.py", line 9, in <module>
+    extract.process_flow()
+  File "C:\Users\Sher Wen\Desktop\Shovel v3.0 (2)\Shovel v3.0\Scripts\Shovel_Classes.py", line 439, in process_flow
+    self.xl_save_wb()
+  File "C:\Users\Sher Wen\Desktop\Shovel v3.0 (2)\Shovel v3.0\Scripts\Shovel_Classes.py", line 419, in xl_save_wb
+    new_wb = ExcelTable(new_file_name + '.xlsm', 'Extractor', 'tbl_Profiles')
+  File "C:\Users\Sher Wen\Desktop\Shovel v3.0 (2)\Shovel v3.0\Scripts\Shovel_Classes.py", line 28, in __init__
+    self.wb = xl.Workbooks(wb)
+  File "C:\Users\SHERWE~1\AppData\Local\Temp\gen_py\3.7\00020813-0000-0000-C000-000000000046x0x1x9\Workbooks.py", line 198, in __call__
+    ret = self._oleobj_.InvokeTypes(0, LCID, 2, (13, 0), ((12, 1),),Index
+pywintypes.com_error: (-2147352567, 'Exception occurred.', (0, None, None, None, 0, -2147352565), None)
+
+ERROR - (-2147352567, 'Exception occurred.', (0, 'Microsoft Excel', "Microsoft Excel cannot access the file 'C:\\Users\\KJSeng\\Desktop\\Wei Ern\\Shovel v3.0\\Shovel v3.0\\Output\\92398300'. There are several possible reasons:\n\n• The file name or path does not exist.\n• The file is being used by another program.\n• The workbook you are trying to save has the same name as a currently open workbook.", 'xlmain11.chm', 0, -2146827284), None)
+Traceback (most recent call last):
+  File "C:\Users\KJSeng\Desktop\Wei Ern\Shovel v3.0\Shovel v3.0\Scripts\Plaxis_Extract_All.py", line 9, in <module>
+    extract.process_flow()
+  File "C:\Users\KJSeng\Desktop\Wei Ern\Shovel v3.0\Shovel v3.0\Scripts\Shovel_Classes.py", line 439, in process_flow
+    self.xl_save_wb()
+  File "C:\Users\KJSeng\Desktop\Wei Ern\Shovel v3.0\Shovel v3.0\Scripts\Shovel_Classes.py", line 419, in xl_save_wb
+    wb.SaveAs(f'{self.output_path}\\{new_file_name}', 52) # enum for .xlsm format
+  File "C:\Users\KJSeng\AppData\Local\Temp\gen_py\3.7\00020813-0000-0000-C000-000000000046x0x1x9\_Workbook.py", line 288, in SaveAs
+    , Local, WorkIdentity)
+pywintypes.com_error: (-2147352567, 'Exception occurred.', (0, 'Microsoft Excel', "Microsoft Excel cannot access the file 'C:\\Users\\KJSeng\\Desktop\\Wei Ern\\Shovel v3.0\\Shovel v3.0\\Output\\92398300'. There are several possible reasons:\n\n• The file name or path does not exist.\n• The file is being used by another program.\n• The workbook you are trying to save has the same name as a currently open workbook.", 'xlmain11.chm', 0, -2146827284), None)
+
+ERROR - "['No.'] not in index"
+Traceback (most recent call last):
+  File "C:\Users\KJSeng\Desktop\Wei Ern\Shovel v3.0 Dev\Shovel v3.0\Scripts\Plaxis_Extract_All.py", line 9, in <module>
+    extract.process_flow()
+  File "C:\Users\KJSeng\Desktop\Wei Ern\Shovel v3.0 Dev\Shovel v3.0\Scripts\Shovel_Classes.py", line 450, in process_flow
+    self.xl_add_profiles(model)
+  File "C:\Users\KJSeng\Desktop\Wei Ern\Shovel v3.0 Dev\Shovel v3.0\Scripts\Shovel_Classes.py", line 398, in xl_add_profiles
+    extractions = self.extraction_df.loc[self.extraction_df['Model'] == model_name, ['No.', 'Phase', 'Element', 'Profile']].values.tolist()
+  File "C:\ProgramData\Bentley\Geotechnical\PLAXIS Python Distribution V1 Update 1\python\lib\site-packages\pandas\core\indexing.py", line 925, in __getitem__
+    return self._getitem_tuple(key)
+  File "C:\ProgramData\Bentley\Geotechnical\PLAXIS Python Distribution V1 Update 1\python\lib\site-packages\pandas\core\indexing.py", line 1109, in _getitem_tuple
+    return self._getitem_tuple_same_dim(tup)
+  File "C:\ProgramData\Bentley\Geotechnical\PLAXIS Python Distribution V1 Update 1\python\lib\site-packages\pandas\core\indexing.py", line 806, in _getitem_tuple_same_dim
+    retval = getattr(retval, self.name)._getitem_axis(key, axis=i)
+  File "C:\ProgramData\Bentley\Geotechnical\PLAXIS Python Distribution V1 Update 1\python\lib\site-packages\pandas\core\indexing.py", line 1153, in _getitem_axis
+    return self._getitem_iterable(key, axis=axis)
+  File "C:\ProgramData\Bentley\Geotechnical\PLAXIS Python Distribution V1 Update 1\python\lib\site-packages\pandas\core\indexing.py", line 1093, in _getitem_iterable
+    keyarr, indexer = self._get_listlike_indexer(key, axis)
+  File "C:\ProgramData\Bentley\Geotechnical\PLAXIS Python Distribution V1 Update 1\python\lib\site-packages\pandas\core\indexing.py", line 1314, in _get_listlike_indexer
+    self._validate_read_indexer(keyarr, indexer, axis)
+  File "C:\ProgramData\Bentley\Geotechnical\PLAXIS Python Distribution V1 Update 1\python\lib\site-packages\pandas\core\indexing.py", line 1377, in _validate_read_indexer
+    raise KeyError(f"{not_found} not in index")
+KeyError: "['No.'] not in index"
+
+ERROR - 'Property 1'
+Traceback (most recent call last):
+  File "C:\ProgramData\Bentley\Geotechnical\PLAXIS Python Distribution V1 Update 1\python\lib\site-packages\pandas\core\indexes\base.py", line 3361, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas\_libs\index.pyx", line 76, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 108, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 5198, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 5206, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'Property 1'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\KJSeng\Desktop\Wei Ern\Shovel v3.0 Dev\Shovel v3.0\Scripts\Plaxis_Extract_All.py", line 9, in <module>
+    extract.process_flow()
+  File "C:\Users\KJSeng\Desktop\Wei Ern\Shovel v3.0 Dev\Shovel v3.0\Scripts\Shovel_Classes.py", line 450, in process_flow
+    self.xl_add_profiles(model)
+  File "C:\Users\KJSeng\Desktop\Wei Ern\Shovel v3.0 Dev\Shovel v3.0\Scripts\Shovel_Classes.py", line 401, in xl_add_profiles
+    profile_list = self.profiles_df.loc[self.profiles_df['Name'].isin(required_profiles), ['Name'] + list(self.extraction_df.loc[:,'Property 1':'Property 8'])].values.tolist()
+  File "C:\ProgramData\Bentley\Geotechnical\PLAXIS Python Distribution V1 Update 1\python\lib\site-packages\pandas\core\indexing.py", line 925, in __getitem__
+    return self._getitem_tuple(key)
+  File "C:\ProgramData\Bentley\Geotechnical\PLAXIS Python Distribution V1 Update 1\python\lib\site-packages\pandas\core\indexing.py", line 1109, in _getitem_tuple
+    return self._getitem_tuple_same_dim(tup)
+  File "C:\ProgramData\Bentley\Geotechnical\PLAXIS Python Distribution V1 Update 1\python\lib\site-packages\pandas\core\indexing.py", line 806, in _getitem_tuple_same_dim
+    retval = getattr(retval, self.name)._getitem_axis(key, axis=i)
+  File "C:\ProgramData\Bentley\Geotechnical\PLAXIS Python Distribution V1 Update 1\python\lib\site-packages\pandas\core\indexing.py", line 1142, in _getitem_axis
+    return self._get_slice_axis(key, axis=axis)
+  File "C:\ProgramData\Bentley\Geotechnical\PLAXIS Python Distribution V1 Update 1\python\lib\site-packages\pandas\core\indexing.py", line 1176, in _get_slice_axis
+    indexer = labels.slice_indexer(slice_obj.start, slice_obj.stop, slice_obj.step)
+  File "C:\ProgramData\Bentley\Geotechnical\PLAXIS Python Distribution V1 Update 1\python\lib\site-packages\pandas\core\indexes\base.py", line 5685, in slice_indexer
+    start_slice, end_slice = self.slice_locs(start, end, step=step)
+  File "C:\ProgramData\Bentley\Geotechnical\PLAXIS Python Distribution V1 Update 1\python\lib\site-packages\pandas\core\indexes\base.py", line 5887, in slice_locs
+    start_slice = self.get_slice_bound(start, "left")
+  File "C:\ProgramData\Bentley\Geotechnical\PLAXIS Python Distribution V1 Update 1\python\lib\site-packages\pandas\core\indexes\base.py", line 5807, in get_slice_bound
+    raise err
+  File "C:\ProgramData\Bentley\Geotechnical\PLAXIS Python Distribution V1 Update 1\python\lib\site-packages\pandas\core\indexes\base.py", line 5801, in get_slice_bound
+    slc = self.get_loc(label)
+  File "C:\ProgramData\Bentley\Geotechnical\PLAXIS Python Distribution V1 Update 1\python\lib\site-packages\pandas\core\indexes\base.py", line 3363, in get_loc
+    raise KeyError(key) from err
+KeyError: 'Property 1'
+
+ERROR - list index out of range
+Traceback (most recent call last):
+  File "C:\Users\KJSeng\Desktop\Wei Ern\Shovel v3.0 Dev\Shovel v3.0\Scripts\Plaxis_Extract_All.py", line 9, in <module>
+    extract.process_flow()
+  File "C:\Users\KJSeng\Desktop\Wei Ern\Shovel v3.0 Dev\Shovel v3.0\Scripts\Shovel_Classes.py", line 450, in process_flow
+    self.xl_add_profiles(model)
+  File "C:\Users\KJSeng\Desktop\Wei Ern\Shovel v3.0 Dev\Shovel v3.0\Scripts\Shovel_Classes.py", line 420, in xl_add_profiles
+    self.output_data_table.write_dict_to_table(new_data)
+  File "C:\Users\KJSeng\Desktop\Wei Ern\Shovel v3.0 Dev\Shovel v3.0\Scripts\Shovel_Classes.py", line 122, in write_dict_to_table
+    data_col_count = len(input_data[0])
+IndexError: list index out of range
